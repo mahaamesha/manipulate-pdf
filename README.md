@@ -13,8 +13,8 @@ Files generated from that has one addition page after the certifiate page, its o
 3. Define the input and output path.
     By default, I assume that:
     ```py
-        input_path = "./input/filename.pdf"
-        output_path = "./output/filename.pdf"
+    input_path = "./input/filename.pdf"
+    output_path = "./output/filename.pdf"
     ```
 4. Run the `manipulate()`:
     - Copy the original file
