@@ -4,10 +4,10 @@
 ### About
 I have bulk certificate that has been generated from mail merge Word. There are multiple pdf files, I put them inside `./input` folder.
 
-**Problem:**\
+### Problem
 Files generated from that has one addition page after the certifiate page, its only white page. I need to keep the first page (the certificate page) and delete others.
 
-**Algorithm**:\
+### Algorithm
 1. Importing library needed.
 2. Read files inside `./input` folder, then save it into a list. This will save the filenames.
 3. Define the input and output path.
