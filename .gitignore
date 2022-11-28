@@ -1,3 +1,7 @@
-/input
-/output
+input/**
+!input/Agam Pamungkas.pdf
+
+output/**
+!output/Agam Pamungkas.pdf
+
 /Sertifikat Talkshow.zip
