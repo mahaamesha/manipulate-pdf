@@ -1,19 +1,8 @@
 # !/usr/bin/python
-# Remove the first two pages (cover sheet) from the PDF
+# Remove the first page of two pages PDF file
 import os
+import myfunc as f
 from pdfrw import PdfReader, PdfWriter
-
-# read files in the input/ folder
-def read_files_path(folder_path="./input"):
-    arr_namefiles = []
-    print("Read files in %s:" %folder_path)
-    for (root, dirs, file) in os.walk(folder_path):
-        for f in file:
-            if '.pdf' in f:
-                arr_namefiles.append(f)
-                print("\t%s" %f)
-    print("\t...\n\t%s files detected." %len(arr_namefiles))
-    return arr_namefiles
 
 def manipulate(filename="file.pdf", input_path="./input", output_path="./output"):
     print("\tManipulate %s" %filename, end="... ")
@@ -35,8 +24,8 @@ def manipulate(filename="file.pdf", input_path="./input", output_path="./output"
 
 
 if __name__ == "__main__":
-    arr_namefiles = read_files_path(folder_path="./input")
+    arr_namefiles = f.read_files_path(folder_path="./input/case01")
 
     print("Running main.py:")
     for f in arr_namefiles:
-        manipulate(filename=f, input_path="./input", output_path="./output")
+        manipulate(filename=f, input_path="./input/case01", output_path="./output/case01")
