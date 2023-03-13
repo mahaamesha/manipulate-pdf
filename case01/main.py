@@ -1,8 +1,10 @@
-# !/usr/bin/python
-# Remove the first page of two pages PDF file
-import os
-import myfunc as f
+# remove the first page of two pages PDF file
+import os, sys
 from pdfrw import PdfReader, PdfWriter
+
+module_folder_path = os.path.abspath( os.getcwd() )
+sys.path.append(module_folder_path)
+import myfunc as f
 
 def manipulate(filename="file.pdf", input_path="./input", output_path="./output"):
     print("\tManipulate %s" %filename, end="... ")
@@ -24,8 +26,8 @@ def manipulate(filename="file.pdf", input_path="./input", output_path="./output"
 
 
 if __name__ == "__main__":
-    arr_namefiles = f.read_files_path(folder_path="./input/case01")
+    arr_namefiles = f.read_files_path(folder_path="./case01/input/")
 
     print("Running main.py:")
     for f in arr_namefiles:
-        manipulate(filename=f, input_path="./input/case01", output_path="./output/case01")
+        manipulate(filename=f, input_path="./case01/input/", output_path="./case01/output/")
